@@ -1,0 +1,106 @@
+@use "variaveis.scss" as v;
+@use "mixins.scss" as mx;
+@use "mobile.scss";
+
+*{
+    font-family: v.$fonte;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    color: v.$corDeFonte;
+}
+
+.cabecalho{
+    @include mx.flex-desktop;
+
+    background-color: v.$corDeFundo;
+    height:20vh;
+
+    & img{
+        height:15vh;
+        margin:1rem ;
+    }
+}
+
+.container{
+    @include mx.flex-desktop;
+}
+
+li{
+    padding:1rem;
+    list-style: none;
+}
+
+li a{
+    color: v.$corDeFonte;
+    text-decoration: none;
+    font-weight:500;
+    font-size:1.5rem;
+    transition: 1s;
+}
+
+li a:hover{
+    text-decoration: underline;
+}
+section {
+    width: 100%;
+    height: 50vh;
+    background-color: v.$corDeFundo;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.9;
+}
+section:nth-child(1){
+    background-image: url(../img/bg01.jpg);
+    height:90vh;
+}
+section:nth-child(3){
+    background-image: url(../img/bg02.jpg);
+    height:90vh;
+}
+section:nth-child(5){
+    background-image: url(../img/bg03.jpg);
+    height:90vh;
+}
+section:nth-child(7){
+    background-image: url(../img/bg04.jpg);
+    height:90vh;
+}
+
+.texto{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    display: table-cell;
+    vertical-align: middle;
+}
+.infos{
+    text-align: center;
+    flex-direction: column;
+    & h2 {
+        padding: 2rem;
+        font-size: 2rem;
+    }
+    & .acomodacoes{
+        @include mx.flex-desktop;
+        width: 90vw;
+        margin: auto;
+    }
+    & img{
+        width: 25%;
+    }
+}
+footer{
+    height:15vh;
+    background-color: v.$corDeFundo;
+    padding: 1rem;
+}
+
+.redes-sociais{
+    margin:1rem;
+    & p {
+        padding-bottom:1rem;
+    }
+}

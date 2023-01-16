@@ -1,0 +1,10 @@
+@mixin box{
+    min-width: 1170px;
+    margin: auto;
+}
+
+@mixin flex-desktop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
